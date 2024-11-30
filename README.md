@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# React Profile Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Task Overview:
+This is a Profile Management Application where users can create, update, and view their profile details. The application provides routing between different pages, form validation, API integration, error handling, and local storage for persistence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+1. **Profile Form Page**:
+   - Collects user details such as:
+     - Name (text input)
+     - Email (email input)
+     - Age (optional number input)
+   - Form validation (Name: Required, Email: Valid format, Age: Optional but must be a valid number).
+   - API integration for submitting user profile data (POST/PUT).
+   - Success and error message handling.
 
-## Expanding the ESLint configuration
+2. **Profile Display Page**:
+   - After form submission, users are redirected to the Profile page.
+   - Displays saved profile data fetched via an API (GET).
+   - If no profile exists, displays a prompt to create one.
+   - Handles API errors (404, server errors).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Routing**:
+   - Uses React Router for navigation between:
+     - `/profile-form` – Form for creating/updating the profile.
+     - `/profile` – Displays saved profile data.
+     - `/404` – Custom page for non-existent routes.
 
-- Configure the top-level `parserOptions` property like this:
+4. **Data Persistence**:
+   - Profile data is stored in local storage to persist across page refreshes.
+   - On loading the profile page, checks local storage first for existing data.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+5. **Global State Management**:
+   - Uses React Context API for managing profile data and API status globally across the app.
+   - Displays user’s first and last name in the navigation bar.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+6. **Environment Variables**:
+   - Configures the API base URL using environment variables (`.env` file).
+   - Supports switching between development and production modes based on environment.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+7. **Bonus Features**:
+   - Delete Profile button with confirmation prompt.
+   - Option to edit the profile by pre-filling the form with existing data.
+   - Deployed application.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Setup Instructions:
+
+### Prerequisites:
+- Node.js and npm installed on your machine.
+
+### Install Dependencies:
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd <project-folder>
