@@ -5,6 +5,20 @@ This is a Profile Management Application where users can create, update, and vie
 
 If you believe this project meets your requirements and proves valuable, I would appreciate it if you could give it a star. Your support motivates me to continue enhancing and sharing my work.
 ⭐ Give a Star on GitHub
+
+---
+## Setup Instructions:
+
+### Prerequisites:
+- Node.js and npm installed on your machine.
+
+### Install Dependencies:
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd <project-folder>
+   npm install (Install all dependencies)
+   npm run start (To start app)
 ---
 
 ## Features:
@@ -43,15 +57,3 @@ If you believe this project meets your requirements and proves valuable, I would
 
 ---
 
-## Setup Instructions:
-
-### Prerequisites:
-- Node.js and npm installed on your machine.
-
-### Install Dependencies:
-1. Clone the repository:
-   ```bash
-   git clone <your-repository-url>
-   cd <project-folder>
-   npm install (Install all dependencies)
-   npm run start (To start app)
