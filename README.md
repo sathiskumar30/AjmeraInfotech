@@ -3,6 +3,8 @@
 ## Task Overview:
 This is a Profile Management Application where users can create, update, and view their profile details. The application provides routing between different pages, form validation, API integration, error handling, and local storage for persistence.
 
+If you believe this project meets your requirements and proves valuable, I would appreciate it if you could give it a star. Your support motivates me to continue enhancing and sharing my work.
+⭐ Give a Star on GitHub
 ---
 
 ## Features:
@@ -39,11 +41,6 @@ This is a Profile Management Application where users can create, update, and vie
    - Configures the API base URL using environment variables (`.env` file).
    - Supports switching between development and production modes based on environment.
 
-7. **Bonus Features**:
-   - Delete Profile button with confirmation prompt.
-   - Option to edit the profile by pre-filling the form with existing data.
-   - Deployed application.
-
 ---
 
 ## Setup Instructions:
@@ -56,3 +53,5 @@ This is a Profile Management Application where users can create, update, and vie
    ```bash
    git clone <your-repository-url>
    cd <project-folder>
+   npm install (Install all dependencies)
+   npm run start (To start app)
